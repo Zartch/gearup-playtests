@@ -1,1 +1,0 @@
-import{r as e}from"./pixi-renderer-CSAES34v.js";export{e as CanvasRenderer};
