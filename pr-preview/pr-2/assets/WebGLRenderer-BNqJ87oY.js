@@ -1,0 +1,1 @@
+import{n as e}from"./pixi-renderer-Bddtcr3h.js";export{e as WebGLRenderer};
