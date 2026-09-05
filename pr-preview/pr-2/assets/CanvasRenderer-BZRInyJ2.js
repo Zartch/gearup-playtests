@@ -1,1 +1,0 @@
-import{r as e}from"./pixi-renderer-CSkHOo4j.js";export{e as CanvasRenderer};
