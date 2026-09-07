@@ -1,1 +1,0 @@
-import{r as e}from"./pixi-renderer-CsDslOVa.js";export{e as CanvasRenderer};

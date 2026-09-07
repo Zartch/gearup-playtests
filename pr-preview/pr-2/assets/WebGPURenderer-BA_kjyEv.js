@@ -1,1 +1,0 @@
-import{t as e}from"./pixi-renderer-CsDslOVa.js";export{e as WebGPURenderer};
