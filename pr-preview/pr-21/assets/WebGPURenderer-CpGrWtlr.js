@@ -1,0 +1,1 @@
+import{t as e}from"./pixi-renderer-BK-NXHKB.js";export{e as WebGPURenderer};
