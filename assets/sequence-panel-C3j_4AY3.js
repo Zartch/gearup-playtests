@@ -1,4 +1,4 @@
-import{H as e,O as t}from"./settlement-sandbox-BJa9i8no.js";import{a as n,b as r,c as i,d as a,f as o,g as s,p as c,r as l,t as u,v as d,y as f}from"./settlementSandbox-By-q-yNk.js";var p=`# Found Greenfield, build a farm with two fields, a house and an orchard, then forbid farms inside the city.
+import{H as e,O as t}from"./settlement-sandbox-BJa9i8no.js";import{a as n,b as r,c as i,d as a,f as o,g as s,p as c,r as l,t as u,v as d,y as f}from"./settlementSandbox-DKOophrK.js";var p=`# Found Greenfield, build a farm with two fields, a house and an orchard, then forbid farms inside the city.
 format: gearup.settlement-sandbox.sequence/v1
 session:
   seed: 20261015

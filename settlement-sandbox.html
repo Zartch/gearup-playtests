@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-By-q-yNk.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-DKOophrK.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/preload-helper-DyuKzX7y.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BJa9i8no.js">
-    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-CCO_1wZQ.css">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-DIVxpmmj.css">
   </head>
   <body>
     <!-- Editor shell (LAB-ONLY): the approved «epic medieval skin», settlement-sandbox-ui README §1–§2, §5, §8. Presentation only. -->
@@ -97,6 +97,7 @@
           <button class="act" type="button" role="tab" data-view="outliner" aria-controls="outliner" aria-label="Outliner" title="Outliner"><svg class="ico" aria-hidden="true"><use href="#i-tree"></use></svg></button>
           <button class="act" type="button" role="tab" data-view="layers" aria-controls="layers" aria-label="Layers" title="Layers"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg></button>
           <button class="act" type="button" role="tab" data-view="policy" aria-controls="tab-policy" aria-label="Policy · farms" title="Policy · farms"><svg class="ico" aria-hidden="true"><use href="#i-scale"></use></svg></button>
+          <button class="act" type="button" role="tab" data-view="city" aria-controls="tab-city" aria-label="City" title="City"><svg class="ico" aria-hidden="true"><use href="#i-table"></use></svg></button>
         </nav>
 
         <section id="dock-left" class="dock" aria-label="Scene">
@@ -109,6 +110,7 @@
             <p class="empty">Draws the urban graph over the city: nodes, segments and UrbanGraph edges. Presentation only.</p>
           </div>
           <div id="tab-policy" class="pane" role="tabpanel" aria-label="Policy · farms"></div>
+          <div id="tab-city" class="pane" role="tabpanel" aria-label="City"><div id="summary"></div></div>
         </section>
         <div class="splitter" data-split="left" role="separator" aria-orientation="vertical" aria-label="Resize the left dock" tabindex="0"></div>
 
@@ -132,7 +134,6 @@
             <button class="tab" type="button" role="tab" data-tab="sequence" aria-controls="tab-sequence"><svg class="ico" aria-hidden="true"><use href="#i-code"></use></svg>Sequence</button>
             <button class="tab" type="button" role="tab" data-tab="metrics" aria-controls="tab-metrics"><svg class="ico" aria-hidden="true"><use href="#i-metrics"></use></svg>Metrics</button>
             <button class="tab" type="button" role="tab" data-tab="data" aria-controls="tab-data"><svg class="ico" aria-hidden="true"><use href="#i-braces"></use></svg>Data</button>
-            <button class="tab" type="button" role="tab" data-tab="city" aria-controls="tab-city"><svg class="ico" aria-hidden="true"><use href="#i-table"></use></svg>City</button>
             <button class="tab" type="button" role="tab" data-tab="lab" aria-controls="tab-lab"><svg class="ico" aria-hidden="true"><use href="#i-sigma"></use></svg>Coherence · Lab readings</button>
             <button class="tab more" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="overflow-bottom" aria-label="More panels">»<span class="n"></span></button>
           </div>
@@ -145,7 +146,6 @@
           </div>
           <div id="tab-metrics" class="pane" role="tabpanel" aria-label="Metrics"></div>
           <div id="tab-data" class="pane" role="tabpanel" aria-label="Data"><p class="empty">The Data tab loads with the panels.</p></div>
-          <div id="tab-city" class="pane" role="tabpanel" aria-label="City"><div id="summary"></div></div>
           <div id="tab-lab" class="pane" role="tabpanel" aria-label="Coherence · Lab readings"></div>
         </section>
         <div class="splitter" data-split="right" role="separator" aria-orientation="vertical" aria-label="Resize the right dock" tabindex="0"></div>
