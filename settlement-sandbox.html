@@ -27,13 +27,30 @@
       .muted { color: #7f95a3; font-size: .82rem; } .ok { color: #9fe6b4; } .ko { color: #ff8f8f; }
       #log { font-family: ui-monospace, monospace; font-size: .75rem; padding-left: 1.4rem; max-height: 14rem; overflow: auto; }
       .row { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+      #terrain-editor-dialog { width: min(1100px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); overflow: auto; padding: 1rem; border: 1px solid #4d6b80; border-radius: 8px; background: #0f1a23; color: #e4edf2; }
+      #terrain-editor-dialog::backdrop { background: rgb(0 0 0 / 65%); }
+      #terrain-editor-dialog h2 { margin: 0 0 .4rem; font-size: 1rem; }
+      #terrain-editor-dialog h3 { margin: .8rem 0 .3rem; font-size: .9rem; }
+      #terrain-editor-dialog [hidden] { display: none; }
+      .terrain-editor-columns { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(260px, 1fr); gap: 1rem; }
+      .terrain-editor-columns > section { min-width: 0; }
+      .terrain-editor-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .3rem .6rem; }
+      .terrain-editor-fields input, .terrain-editor-fields select { width: 100%; min-width: 0; }
+      .terrain-editor-wide { grid-column: 1 / -1; }
+      #terrain-preview-container { height: clamp(300px, 44dvh, 450px); min-height: 300px; margin: .6rem 0; border: 1px solid #4d6b80; background: #10202b; }
+      #terrain-preview { cursor: crosshair; touch-action: none; }
+      #terrain-preview-sample { min-height: 2.5em; }
+      #terrain-feature-list { width: 100%; min-height: 7rem; }
+      .terrain-editor-footer { margin-top: 1rem; border-top: 1px solid #2a3e4d; padding-top: .7rem; }
+      #terrain-editor-status { flex: 1 1 100%; min-height: 1.5em; }
       @media (max-width: 760px) { main { grid-template-columns: 1fr; grid-template-rows: 55dvh auto; } aside { border-left: 0; border-top: 1px solid #2a3e4d; } body { overflow: auto; height: auto; } }
+      @media (max-width: 760px) { .terrain-editor-columns { grid-template-columns: 1fr; } #terrain-editor-dialog { padding: .7rem; } }
     </style>
-    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-CtNMQ2_2.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-C5WTGYtd.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/preload-helper-B2kRDP_E.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
-    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-CItAstx2.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox--hPU1zcT.js">
     <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/lab-navigation-20FZ0u4c.css">
   </head>
   <body>
@@ -53,6 +70,8 @@
         <label>maxY<input id="max-y" class="bound" type="number" placeholder="default" /></label>
         <button id="new-session" type="submit">New session</button>
       </form>
+      <button id="terrain-editor-open" type="button" aria-describedby="terrain-editor-hint">Edit terrain</button>
+      <span id="terrain-editor-hint" class="muted" role="status"></span>
       <span id="session-status" class="muted"></span>
       <a class="muted" href="./settlement-area.html">Settlement Area (H)</a>
     </header>
@@ -72,5 +91,60 @@
         <div id="extra-panels"></div>
       </aside>
     </main>
+    <dialog id="terrain-editor-dialog" aria-labelledby="terrain-editor-title" aria-describedby="terrain-editor-metadata">
+      <h2 id="terrain-editor-title">Terrain editor · LAB-ONLY</h2>
+      <p id="terrain-editor-metadata" class="muted"></p>
+      <div class="terrain-editor-columns">
+        <section aria-label="Terrain preview">
+          <h3>Preview window</h3>
+          <div class="terrain-editor-fields">
+            <label for="terrain-focus-x">Focus SU x<input id="terrain-focus-x" type="number" step="1"></label>
+            <label for="terrain-focus-y">Focus SU y<input id="terrain-focus-y" type="number" step="1"></label>
+            <label for="terrain-neighbour">Neighbour<select id="terrain-neighbour"><option value="none">none</option><option value="N">N</option><option value="E">E</option><option value="S">S</option><option value="W">W</option></select></label>
+            <button id="terrain-preview-refresh" type="button">Refresh preview</button>
+          </div>
+          <div id="terrain-preview-container"><canvas id="terrain-preview" aria-label="Static terrain preview"></canvas></div>
+          <div id="terrain-preview-sample" class="muted" role="status">Move over the preview to inspect a sample.</div>
+          <p id="terrain-preview-legend" class="muted">Blue: static water · grey hatch: mountain (not buildable) · darker green: greater Lab height · gold outline: origin. Click to fill the active feature row; Save keeps it in the draft.</p>
+          <h3>Founding origin</h3>
+          <div class="terrain-editor-fields">
+            <label for="terrain-origin-x">Origin SU x<input id="terrain-origin-x" type="number" step="1"></label>
+            <label for="terrain-origin-y">Origin SU y<input id="terrain-origin-y" type="number" step="1"></label>
+          </div>
+          <button id="terrain-origin-set" type="button">Set origin</button>
+          <p class="muted">Origin must stay inside these bounds. Apply checks whether it can host the settlement.</p>
+        </section>
+        <section aria-label="Terrain features">
+          <h3>Features in the draft</h3>
+          <label for="terrain-feature-list">Select a feature<select id="terrain-feature-list" size="6"></select></label>
+          <div class="terrain-editor-fields">
+            <label for="terrain-feature-kind">Feature kind<select id="terrain-feature-kind"><option value="rivers">River</option><option value="shores">Coast</option><option value="hills" selected>Hill</option><option value="mountains">Mountain</option></select></label>
+            <button id="terrain-feature-new" type="button">New feature</button>
+          </div>
+          <div id="terrain-feature-fields" class="terrain-editor-fields">
+            <label for="terrain-x" data-terrain-kinds="hills mountains">Centre global x<input id="terrain-x" type="number" step="1"></label>
+            <label for="terrain-y" data-terrain-kinds="hills mountains">Centre global y<input id="terrain-y" type="number" step="1"></label>
+            <label for="terrain-radius" data-terrain-kinds="hills mountains">Radius<input id="terrain-radius" type="number" step="any" min="0"></label>
+            <label for="terrain-steps" data-terrain-kinds="hills">Height steps<input id="terrain-steps" type="number" step="1" min="1"></label>
+            <label for="terrain-side" data-terrain-kinds="shores">Water side<select id="terrain-side"><option value="N">N</option><option value="S">S</option><option value="E">E</option><option value="W">W</option></select></label>
+            <label for="terrain-at" data-terrain-kinds="shores">Global coordinate<input id="terrain-at" type="number" step="any"></label>
+            <label for="terrain-width" data-terrain-kinds="rivers">Raster width<input id="terrain-width" type="number" step="1" min="1"></label>
+            <label for="terrain-points" class="terrain-editor-wide" data-terrain-kinds="rivers">Global points · one x,y per line<textarea id="terrain-points" rows="5" spellcheck="false" placeholder="0,30&#10;60,30"></textarea></label>
+          </div>
+          <p id="terrain-feature-help" class="muted"></p>
+          <div class="row">
+            <button id="terrain-feature-save" type="button">Add feature</button>
+            <button id="terrain-feature-delete" type="button">Delete feature</button>
+            <button id="terrain-feature-discard" type="button">Discard row</button>
+          </div>
+          <p class="muted">Save edits the draft. Apply replaces the empty session. Imported anchors are preserved and cannot be edited here.</p>
+        </section>
+      </div>
+      <div class="terrain-editor-footer row">
+        <button id="terrain-editor-apply" type="button">Apply terrain</button>
+        <button id="terrain-editor-cancel" type="button">Cancel</button>
+        <div id="terrain-editor-status" class="muted" role="status"></div>
+      </div>
+    </dialog>
   </body>
 </html>
