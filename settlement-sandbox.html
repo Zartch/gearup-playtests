@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-BH5aiCoO.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-By-q-yNk.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/preload-helper-DyuKzX7y.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
-    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BWGQ3HZr.js">
-    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-D4EXTz_O.css">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BJa9i8no.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-CCO_1wZQ.css">
   </head>
   <body>
     <!-- Editor shell (LAB-ONLY): the approved «epic medieval skin», settlement-sandbox-ui README §1–§2, §5, §8. Presentation only. -->
@@ -30,6 +30,7 @@
         <symbol id="i-metrics" viewBox="0 0 16 16"><path d="M3.5 13V9.5M8 13V5M12.5 13V7.5M2 13.5h12"></path></symbol>
         <symbol id="i-table" viewBox="0 0 16 16"><rect x="2.5" y="3" width="11" height="10" rx="1"></rect><path d="M2.5 6.5h11M6.5 6.5V13"></path></symbol>
         <symbol id="i-sigma" viewBox="0 0 16 16"><path d="M12 3.5H4.5L8.5 8l-4 4.5H12"></path></symbol>
+        <symbol id="i-braces" viewBox="0 0 16 16"><path d="M6 2.5c-1.5 0-2 .6-2 1.8v1.9c0 .9-.5 1.6-1.5 1.8 1 .2 1.5.9 1.5 1.8v1.9c0 1.2.5 1.8 2 1.8M10 2.5c1.5 0 2 .6 2 1.8v1.9c0 .9.5 1.6 1.5 1.8-1 .2-1.5.9-1.5 1.8v1.9c0 1.2-.5 1.8-2 1.8"></path></symbol>
         <symbol id="i-refresh" viewBox="0 0 16 16"><path d="M13 8a5 5 0 1 1-1.5-3.6"></path><path d="M13 2.5v3h-3"></path></symbol>
         <symbol id="i-import" viewBox="0 0 16 16"><path d="M8 2v8M5 7l3 3 3-3M3 13h10"></path></symbol>
         <symbol id="i-export" viewBox="0 0 16 16"><path d="M8 10V2M5 5l3-3 3 3M3 13h10"></path></symbol>
@@ -115,9 +116,14 @@
           <label class="fld">View <select id="view-select" class="dd" aria-label="View"></select></label>
           <div id="crumb" class="crumb"><b>City</b></div>
           <span class="sp"></span>
+          <div class="cam" role="group" aria-label="Map camera">
+            <button id="zoom-out" class="btn icon" type="button" aria-label="Zoom out" title="Zoom out (wheel down, pinch)">−</button>
+            <button id="zoom-in" class="btn icon" type="button" aria-label="Zoom in" title="Zoom in (wheel up, pinch)">+</button>
+            <button id="zoom-fit" class="btn" type="button" title="Fit the view on screen again (the zoom and pan are presentation only)">Fit city</button>
+          </div>
           <label class="chk"><input id="graph-toggle-bar" type="checkbox" /> Graph layer</label>
         </div>
-        <div id="stage"><canvas id="stage-canvas" aria-label="City view" title="Click: select · Alt+click or Tab: next under the cursor · Ctrl+↑: parent · right-click or Shift+F10: actions · Esc: deselect"></canvas></div>
+        <div id="stage"><canvas id="stage-canvas" aria-label="City view" title="Click: select · Alt+click or Tab: next under the cursor · Ctrl+↑: parent · right-click or Shift+F10: actions · Esc: deselect · wheel: zoom · drag: pan · mouse at an edge: scroll"></canvas></div>
         <div class="splitter" data-split="bottom" role="separator" aria-orientation="horizontal" aria-label="Resize the bottom dock" tabindex="0"></div>
 
         <section id="dock-bottom" class="dock" aria-label="History and readings">
@@ -125,6 +131,7 @@
             <button class="tab" type="button" role="tab" data-tab="log" aria-controls="tab-log"><svg class="ico" aria-hidden="true"><use href="#i-timeline"></use></svg>Timeline · Log</button>
             <button class="tab" type="button" role="tab" data-tab="sequence" aria-controls="tab-sequence"><svg class="ico" aria-hidden="true"><use href="#i-code"></use></svg>Sequence</button>
             <button class="tab" type="button" role="tab" data-tab="metrics" aria-controls="tab-metrics"><svg class="ico" aria-hidden="true"><use href="#i-metrics"></use></svg>Metrics</button>
+            <button class="tab" type="button" role="tab" data-tab="data" aria-controls="tab-data"><svg class="ico" aria-hidden="true"><use href="#i-braces"></use></svg>Data</button>
             <button class="tab" type="button" role="tab" data-tab="city" aria-controls="tab-city"><svg class="ico" aria-hidden="true"><use href="#i-table"></use></svg>City</button>
             <button class="tab" type="button" role="tab" data-tab="lab" aria-controls="tab-lab"><svg class="ico" aria-hidden="true"><use href="#i-sigma"></use></svg>Coherence · Lab readings</button>
             <button class="tab more" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="overflow-bottom" aria-label="More panels">»<span class="n"></span></button>
@@ -134,9 +141,10 @@
             <ol id="log"></ol>
           </div>
           <div id="tab-sequence" class="pane" role="tabpanel" aria-label="Sequence">
-            <p class="empty">Construction sequences come in phase D.</p>
+            <p class="empty">The Sequence tab loads with the panels.</p>
           </div>
           <div id="tab-metrics" class="pane" role="tabpanel" aria-label="Metrics"></div>
+          <div id="tab-data" class="pane" role="tabpanel" aria-label="Data"><p class="empty">The Data tab loads with the panels.</p></div>
           <div id="tab-city" class="pane" role="tabpanel" aria-label="City"><div id="summary"></div></div>
           <div id="tab-lab" class="pane" role="tabpanel" aria-label="Coherence · Lab readings"></div>
         </section>
@@ -240,6 +248,40 @@
             <button id="new-session" class="btn primary" type="submit">Create session</button>
           </div>
         </form>
+      </dialog>
+
+      <!-- Scenario › Load sequence… and the Sequence tab's «Edit sequence…» (editor v2, LAB-ONLY): the full-screen sequence editor. The
+           text is checked while typing; nothing is applied with an error. Apply runs every step, Load for stepping runs none, and Cancel
+           or Esc close it without changes. The Sequence tab (sequence-panel.ts) watches the progress. -->
+      <dialog id="dialog-sequence" class="dialog" aria-labelledby="dialog-sequence-title" aria-describedby="sequence-dialog-status">
+        <div class="dlg-h"><svg class="ico lg" aria-hidden="true"><use href="#i-code"></use></svg><span id="dialog-sequence-title">Sequence editor</span><span class="seq-lab faint">LAB-ONLY · the YAML or JSON that builds the city, step by step</span></div>
+        <div class="seq-tools">
+          <label class="seq-field">Load <select id="sequence-example" aria-label="Example or preset sequence"></select></label>
+          <label class="seq-field">File <input id="sequence-file" type="file" accept=".yaml,.yml,.json" /></label>
+        </div>
+        <div class="seq-body">
+          <div class="seq-editor">
+            <div id="sequence-gutter" aria-hidden="true"></div>
+            <textarea id="sequence-text" spellcheck="false" wrap="off" aria-label="Sequence source (YAML or JSON)" placeholder="format: gearup.settlement-sandbox.sequence/v1&#10;steps:&#10;  - PlaceTownHall: { oldTownName: Old Town }"></textarea>
+          </div>
+          <aside class="seq-aside" aria-label="Errors and minimal example">
+            <div class="seq-aside-h"><span class="ph">Errors</span></div>
+            <ul id="sequence-errors" aria-label="Sequence errors"></ul>
+            <div class="seq-aside-h"><span class="ph">Minimal example</span><span class="sp"></span>
+              <button id="sequence-copy-minimal" class="btn" type="button" title="Copy the minimal example to the clipboard">Copy example</button>
+              <button id="sequence-insert-minimal" class="btn" type="button" title="Replace the text with the minimal example">Insert example</button>
+            </div>
+            <pre id="sequence-minimal" tabindex="0" aria-label="Minimal example"></pre>
+          </aside>
+        </div>
+        <div id="sequence-dialog-status" class="muted" role="status"></div>
+        <div class="dlg-f">
+          <button id="sequence-cancel" class="btn" type="button" data-close-dialog title="Close without changes (Esc)">Cancel</button>
+          <span class="sp"></span>
+          <button id="sequence-load" class="btn" type="button" title="Show the steps in the Sequence tab without running any: Step runs them one by one">Load for stepping</button>
+          <button id="sequence-apply" class="btn" type="button" title="Run every step on the session on screen">Apply to current session</button>
+          <button id="sequence-new-session" class="btn primary" type="button">Apply to new session</button>
+        </div>
       </dialog>
 
       <!-- Session › Edit terrain…: main's pre-foundation terrain editor (PR #210); ids and structure as authored there, shell tokens in editor.css. -->
