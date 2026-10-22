@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-P2Xu9kJm.js";var e=(e=>{let t=new URL(e);if(t.search===``)return null;let n=new URL(`gameplay.html`,t);return n.search=t.search,n.hash=t.hash,n.href})(window.location.href);e!==null&&window.location.replace(e);
