@@ -1,0 +1,287 @@
+{
+  "title": "Stylized Grass & Dirt",
+  "author": "Julio Sillet / JulioVII",
+  "source": "https://juliovii.itch.io/ftpgrass-dirt",
+  "authorStore": "https://juliosillet.gumroad.com/l/gsbsgn",
+  "license": "CC-BY (version not specified on the public product page)",
+  "licenseEvidence": "https://juliovii.itch.io/ftpgrass-dirt",
+  "attribution": "Stylized Grass & Dirt by Julio Sillet (JulioVII), CC-BY. Resized to 1024px and recompressed for this scene.",
+  "archive": {
+    "filename": "Stylized_GrassAndDirt_JulioVII.zip",
+    "sha256": "706bddc944f28c751a99fccbbd90f8b00cf5f89ea57f534b74aacc469733fd0d",
+    "originalResolution": 4096
+  },
+  "processing": "Only official source images were used. Resized with Lanczos to 1024x1024; base color JPEG quality 90, normals and roughness quality 95. OpenGL tangent-space normals were renormalized after resize; no vertical flip or green-channel inversion.",
+  "textures": {
+    "grass": {
+      "basecolor": {
+        "file": "grass-basecolor.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrass_01/Stylized_HandpaintedGrass_01_basecolor.jpg",
+        "sourceSha256": "44f25a79978da3890f89fd1b1936dbd6e74f7e9e72a9b73c3a0be428d299b675",
+        "sha256": "83d614247395ce0e41eca9377b6801e82278310a2fa0c6ed4de9056bf121a582",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "grass-normal.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrass_01/Stylized_HandpaintedGrass_01_normalogl.jpg",
+        "sourceSha256": "8beee344fe0199559182d7b45265012292717ee6327c89900840551f43084ef1",
+        "sha256": "9e7c95f9aed80c0db2d2990108104ba9e270f7cdf15f99fe97c83c056f33c5da",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "grass-roughness.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrass_01/Stylized_HandpaintedGrass_01_roughness.jpg",
+        "sourceSha256": "45ae53d067df5af17ef834630f3fb52c06b0c4d0fe7d01ffd34c8786ca610579",
+        "sha256": "f76d5eed8aef0d7df6c56dd7751ffad4b5dfd14fed83cb11e84381ceed2b0bd5",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "sourceExtremaRGB": [
+          [
+            197,
+            214
+          ],
+          [
+            197,
+            214
+          ],
+          [
+            197,
+            214
+          ]
+        ]
+      }
+    },
+    "dirt": {
+      "basecolor": {
+        "file": "dirt-basecolor.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedDirt_01/Stylized_HandpaintedDirt_01_basecolor.jpg",
+        "sourceSha256": "30db1e5d476cd810c116cf68c48e36fdaaa2c3697ef3acfbf356c02419747864",
+        "sha256": "1990141f688d70d2e123bf35beb6c7ccd03da6f73eee728ca2c22681532cd7bc",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "dirt-normal.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedDirt_01/Stylized_HandpaintedDirt_01_normalogl.jpg",
+        "sourceSha256": "45e6f23f6234f14ed1df9290beb4a5368e4822e4528441dfb213e0f6920a2f9a",
+        "sha256": "8363ef20a39d9612aa95a54a0e9344b97c45548530ed1697a95ed323201e81e4",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "dirt-roughness.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedDirt_01/Stylized_HandpaintedDirt_01_roughness.jpg",
+        "sourceSha256": "cb38d712eb556a3a3c242da9425e0a70d657a73a2319653cb87d7ab6dbdb6a0a",
+        "sha256": "d47fb5f92eb8a22d811a4151d92bfcdfedccec53a84af85d6606755ebbd3048c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "sourceExtremaRGB": [
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ]
+        ]
+      }
+    },
+    "sand": {
+      "basecolor": {
+        "file": "sand-basecolor.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedSand_01/Stylized_HandpaintedSand_01_basecolor.jpg",
+        "sourceSha256": "1109900b2c3605e1ba753d5c0e7fa2b7b04e30dea5db184934bb04939e8611ae",
+        "sha256": "565ce98aa9ef372ef636f7faaedd04ff49d6f66f34e23ddd5078e366d4ba0e0d",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "sand-normal.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedSand_01/Stylized_HandpaintedSand_01_normalogl.jpg",
+        "sourceSha256": "b5ccd918947f3e227801f150e47282ece1beb6b9a8973bd2a97f5e0ca4da4645",
+        "sha256": "9c9543edad223efea282c88e33dab75cea7080cb70b3eedb5cffe7b998275811",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "sand-roughness.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedSand_01/Stylized_HandpaintedSand_01_roughness.jpg",
+        "sourceSha256": "cb38d712eb556a3a3c242da9425e0a70d657a73a2319653cb87d7ab6dbdb6a0a",
+        "sha256": "d47fb5f92eb8a22d811a4151d92bfcdfedccec53a84af85d6606755ebbd3048c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "sourceExtremaRGB": [
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ]
+        ]
+      }
+    },
+    "rock": {
+      "basecolor": {
+        "file": "rock-basecolor.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedStones_02/Stylized_HandpaintedStones_02_basecolor.jpg",
+        "sourceSha256": "dd414490ffddd55b6ca5ee564164f5d5a7d255f094352baf485c3d8f74fdd59e",
+        "sha256": "9539d5805660cc9d5fad20f00a50a08660ad355171de7ab46fe456222d87a094",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "rock-normal.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedStones_02/Stylized_HandpaintedStones_02_normalogl.jpg",
+        "sourceSha256": "3397ae4dfb4fb4bd9fa7458b0da87a7271a18e81e7077ecfa652ff62d4395318",
+        "sha256": "d6ce2fd7fc9e03e943b535be8aaad582340bdc50dac0c70bd12c112a19e33c17",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "rock-roughness.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedStones_02/Stylized_HandpaintedStones_02_roughness.jpg",
+        "sourceSha256": "cb38d712eb556a3a3c242da9425e0a70d657a73a2319653cb87d7ab6dbdb6a0a",
+        "sha256": "d47fb5f92eb8a22d811a4151d92bfcdfedccec53a84af85d6606755ebbd3048c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "sourceExtremaRGB": [
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ]
+        ]
+      }
+    },
+    "grass-dirt": {
+      "basecolor": {
+        "file": "grass-dirt-basecolor.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrassAndDirt_01/Stylized_HandpaintedGrassAndDirt_01_basecolor.jpg",
+        "sourceSha256": "5ce27b8f5e479da92acb2801f09611c7767376d7c680507e4a10fcfa9ce230df",
+        "sha256": "bf6339fb0761d23fe48fba8467c7b16bc0cf300f3f5202ecad138e45919e2add",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "grass-dirt-normal.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrassAndDirt_01/Stylized_HandpaintedGrassAndDirt_01_normalogl.jpg",
+        "sourceSha256": "ab377ce691d9324693d309bef418abd68793b793194caf061be387d725ab82c8",
+        "sha256": "32404ad89b743347f86b6ffdf7625bad6efd86ba979870c4173791a063a31e28",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "grass-dirt-roughness.jpg",
+        "sourceEntry": "JPEG/Stylized_HandpaintedGrassAndDirt_01/Stylized_HandpaintedGrassAndDirt_01_roughness.jpg",
+        "sourceSha256": "cb38d712eb556a3a3c242da9425e0a70d657a73a2319653cb87d7ab6dbdb6a0a",
+        "sha256": "d47fb5f92eb8a22d811a4151d92bfcdfedccec53a84af85d6606755ebbd3048c",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "sourceExtremaRGB": [
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ],
+          [
+            255,
+            255
+          ]
+        ]
+      }
+    },
+    "cliff": {
+      "basecolor": {
+        "file": "cliff-basecolor.jpg",
+        "sourceEntry": "JPEG/Stone_04/Stone_04_basecolor.jpg",
+        "source": "https://juliovii.itch.io/stylized-stone-wood",
+        "sourceArchive": "Materials_Stylized_01_JulioVII.zip",
+        "sourceSha256": "eca08266a10295613b958b7be0a53aa621d9c59249d7f3ffb7549485b9336d0c",
+        "sha256": "e14e98c23ee1aeae9377bfee35f7dd090a9565c42af0a9e29f358dc9da01a615",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "sRGB"
+      },
+      "normal": {
+        "file": "cliff-normal.jpg",
+        "sourceEntry": "JPEG/Stone_04/Stone_04_normalogl.jpg",
+        "source": "https://juliovii.itch.io/stylized-stone-wood",
+        "sourceArchive": "Materials_Stylized_01_JulioVII.zip",
+        "sourceSha256": "2dbebd1ba5f198bf18451ef2cba80987624043415673d7ab7e1c610841b7f6c6",
+        "sha256": "ba79f6af0e0a9727f58092d6b1d842d1e3ffb1b36524600ebd2f599c967cf66e",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion",
+        "convention": "OpenGL (+Y), from source normalogl file"
+      },
+      "roughness": {
+        "file": "cliff-roughness.jpg",
+        "sourceEntry": "JPEG/Stone_04/Stone_04_roughness.jpg",
+        "source": "https://juliovii.itch.io/stylized-stone-wood",
+        "sourceArchive": "Materials_Stylized_01_JulioVII.zip",
+        "sourceSha256": "d18f0bdd5adb77d05045501dda5368de6d74cfc91cc0bae0a109b3e7ec2eff49",
+        "sha256": "a94278270e9ad3760f5bc6f3eb07463d58fd185d509e6df51da98a372283e9a6",
+        "width": 1024,
+        "height": 1024,
+        "colorSpace": "linear / no color space conversion"
+      }
+    }
+  },
+  "additionalArchives": [
+    {
+      "filename": "Materials_Stylized_01_JulioVII.zip",
+      "sha256": "2c76254cf89e1f72efb8169f79225698a81ab1d9210d08c5625f057509d2df4f",
+      "originalResolution": 4096,
+      "title": "Stylized Stone & Wood",
+      "source": "https://juliovii.itch.io/stylized-stone-wood",
+      "author": "Julio Sillet / JulioVII",
+      "license": "CC-BY (version not specified on the public product page)"
+    }
+  ],
+  "additionalAttributions": [
+    "Stylized Stone & Wood by Julio Sillet (JulioVII), CC-BY. Stone_04 resized to 1024px and recompressed."
+  ]
+}
