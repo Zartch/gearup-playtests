@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-DKOophrK.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-DvFrwoyE.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/preload-helper-DyuKzX7y.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BJa9i8no.js">
-    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-DIVxpmmj.css">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/terrain-editor-yQOBryR8.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-eNp9oWy4.css">
   </head>
   <body>
     <!-- Editor shell (LAB-ONLY): the approved «epic medieval skin», settlement-sandbox-ui README §1–§2, §5, §8. Presentation only. -->
@@ -284,62 +285,8 @@
         </div>
       </dialog>
 
-      <!-- Session › Edit terrain…: main's pre-foundation terrain editor (PR #210); ids and structure as authored there, shell tokens in editor.css. -->
-      <dialog id="terrain-editor-dialog" class="dialog" aria-labelledby="terrain-editor-title" aria-describedby="terrain-editor-metadata">
-        <h2 id="terrain-editor-title">Terrain editor · LAB-ONLY</h2>
-        <p id="terrain-editor-metadata" class="muted"></p>
-        <div class="terrain-editor-columns">
-          <section aria-label="Terrain preview">
-            <h3>Preview window</h3>
-            <div class="terrain-editor-fields">
-              <label for="terrain-focus-x">Focus SU x<input id="terrain-focus-x" type="number" step="1"></label>
-              <label for="terrain-focus-y">Focus SU y<input id="terrain-focus-y" type="number" step="1"></label>
-              <label for="terrain-neighbour">Neighbour<select id="terrain-neighbour"><option value="none">none</option><option value="N">N</option><option value="E">E</option><option value="S">S</option><option value="W">W</option></select></label>
-              <button id="terrain-preview-refresh" type="button">Refresh preview</button>
-            </div>
-            <div id="terrain-preview-container"><canvas id="terrain-preview" aria-label="Static terrain preview"></canvas></div>
-            <div id="terrain-preview-sample" class="muted" role="status">Move over the preview to inspect a sample.</div>
-            <p id="terrain-preview-legend" class="muted">Blue: static water · grey hatch: mountain (not buildable) · darker green: greater Lab height · gold outline: origin. Click to fill the active feature row; Save keeps it in the draft.</p>
-            <h3>Founding origin</h3>
-            <div class="terrain-editor-fields">
-              <label for="terrain-origin-x">Origin SU x<input id="terrain-origin-x" type="number" step="1"></label>
-              <label for="terrain-origin-y">Origin SU y<input id="terrain-origin-y" type="number" step="1"></label>
-            </div>
-            <button id="terrain-origin-set" type="button">Set origin</button>
-            <p class="muted">Origin must stay inside these bounds. Apply checks whether it can host the settlement.</p>
-          </section>
-          <section aria-label="Terrain features">
-            <h3>Features in the draft</h3>
-            <label for="terrain-feature-list">Select a feature<select id="terrain-feature-list" size="6"></select></label>
-            <div class="terrain-editor-fields">
-              <label for="terrain-feature-kind">Feature kind<select id="terrain-feature-kind"><option value="rivers">River</option><option value="shores">Coast</option><option value="hills" selected>Hill</option><option value="mountains">Mountain</option></select></label>
-              <button id="terrain-feature-new" type="button">New feature</button>
-            </div>
-            <div id="terrain-feature-fields" class="terrain-editor-fields">
-              <label for="terrain-x" data-terrain-kinds="hills mountains">Centre global x<input id="terrain-x" type="number" step="1"></label>
-              <label for="terrain-y" data-terrain-kinds="hills mountains">Centre global y<input id="terrain-y" type="number" step="1"></label>
-              <label for="terrain-radius" data-terrain-kinds="hills mountains">Radius<input id="terrain-radius" type="number" step="any" min="0"></label>
-              <label for="terrain-steps" data-terrain-kinds="hills">Height steps<input id="terrain-steps" type="number" step="1" min="1"></label>
-              <label for="terrain-side" data-terrain-kinds="shores">Water side<select id="terrain-side"><option value="N">N</option><option value="S">S</option><option value="E">E</option><option value="W">W</option></select></label>
-              <label for="terrain-at" data-terrain-kinds="shores">Global coordinate<input id="terrain-at" type="number" step="any"></label>
-              <label for="terrain-width" data-terrain-kinds="rivers">Raster width<input id="terrain-width" type="number" step="1" min="1"></label>
-              <label for="terrain-points" class="terrain-editor-wide" data-terrain-kinds="rivers">Global points · one x,y per line<textarea id="terrain-points" rows="5" spellcheck="false" placeholder="0,30&#10;60,30"></textarea></label>
-            </div>
-            <p id="terrain-feature-help" class="muted"></p>
-            <div class="row">
-              <button id="terrain-feature-save" type="button">Add feature</button>
-              <button id="terrain-feature-delete" type="button">Delete feature</button>
-              <button id="terrain-feature-discard" type="button">Discard row</button>
-            </div>
-            <p class="muted">Save edits the draft. Apply replaces the empty session. Imported anchors are preserved and cannot be edited here.</p>
-          </section>
-        </div>
-        <div class="terrain-editor-footer row">
-          <button id="terrain-editor-apply" type="button">Apply terrain</button>
-          <button id="terrain-editor-cancel" type="button">Cancel</button>
-          <div id="terrain-editor-status" class="muted" role="status"></div>
-        </div>
-      </dialog>
+      <!-- Shared terrain controls mount here; the map editor hosts the same view as a standalone page. -->
+      <dialog id="terrain-editor-dialog" class="dialog" aria-labelledby="terrain-editor-title" aria-describedby="terrain-editor-metadata"></dialog>
     </div>
   </body>
 </html>

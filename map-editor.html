@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f0d0a" />
+    <meta name="description" content="Crea y edita mapas de terreno de Gear Up: ríos, costas, colinas y montañas." />
+    <link rel="icon" href="data:," />
+    <title>Gear Up · Editor de mapas</title>
+    <script type="module" crossorigin src="/gearup-playtests/assets/mapEditor-DLApNI6o.js"></script>
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BJa9i8no.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/terrain-editor-yQOBryR8.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/mapEditor-qDsVAPJl.css">
+  </head>
+  <body>
+    <header class="map-header">
+      <div><p class="eyebrow">GEAR UP · HERRAMIENTAS</p><h1>Editor de mapas</h1></div>
+      <a class="lab-home-link" href="./" aria-label="Volver al mapa de labs">← Labs</a>
+    </header>
+    <main>
+      <p class="map-intro">Diseña ríos, costas, colinas y montañas. Exporta tu mapa para usarlo como escenario inicial en Settlements.</p>
+      <div class="map-toolbar" aria-label="Archivo del mapa">
+        <form id="map-create">
+          <label for="map-seed">Semilla<input id="map-seed" type="number" step="1" value="20261024" required /></label>
+          <label for="map-preset">Terreno inicial<select id="map-preset"><option value="dry">Llano</option><option value="river">Río</option><option value="mountain">Montañas</option></select></label>
+          <button id="map-new" type="submit">Nuevo mapa</button>
+        </form>
+        <label class="map-import">Importar mapa<input id="map-import" type="file" accept=".json,application/json" /></label>
+        <button id="map-export" type="button">Exportar mapa</button>
+      </div>
+      <p class="map-help">Guarda cada elemento con «Add / Update feature» y el terreno con «Apply terrain». Exportar también guarda el terreno. Los archivos JSON se pueden importar en el menú Scenario de Settlements.</p>
+      <p id="map-status" role="status" aria-live="polite"></p>
+      <button id="terrain-editor-open" type="button" hidden>Editar terreno</button>
+      <span id="terrain-editor-hint" hidden></span>
+      <section id="terrain-editor-dialog" aria-labelledby="terrain-editor-title" aria-describedby="terrain-editor-metadata"></section>
+    </main>
+  </body>
+</html>
