@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e6e9da" />
+    <title>Valle del río · Gear Up</title>
+    <script type="module" crossorigin src="/gearup-playtests/pr-preview/pr-224/assets/terrainArt-DHIoNCoK.js"></script>
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/pr-preview/pr-224/assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/pr-preview/pr-224/assets/three.module-IgnW61my.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/pr-preview/pr-224/assets/GLTFLoader-Bl-45R-f.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/pr-preview/pr-224/assets/terrainArt-BicWZ03V.css">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/pr-preview/pr-224/assets/lab-navigation-20FZ0u4c.css">
+  </head>
+  <body>
+    <main id="study">
+      <div id="scene" aria-label="Escena 3D de un valle con montaña, bosque, río y orilla"></div>
+      <header class="masthead">
+        <a class="brand lab-home-link" href="./" aria-label="Volver al mapa de labs">G<span>U</span></a>
+        <div><p class="eyebrow">GEAR UP / ESTUDIO DE TERRENO 01</p><h1>Valle del río<span>.</span></h1><p class="description">JulioVII × Quaternius</p></div>
+      </header>
+      <details class="environment-panel" open>
+        <summary class="environment-summary"><span class="environment-dot" aria-hidden="true"></span><span>Ambiente<small>Sol, clima y vegetación</small></span><span class="panel-chevron" aria-hidden="true">⌄</span></summary>
+        <div class="environment-panel-content">
+          <section class="controls" aria-label="Controles de la escena">
+            <label class="vegetation-control"><input id="vegetation" type="checkbox" checked /><span>Bosque</span></label>
+            <button id="reset" type="button" title="Restablecer cámara">Vista inicial <span aria-hidden="true">↗</span></button>
+          </section>
+          <div id="environment-controls"></div>
+        </div>
+      </details>
+      <div id="loading" role="status"><span class="loading-leaf" aria-hidden="true">◈</span><p id="loading-text">Preparando el valle…</p></div>
+      <footer class="footer">
+        <div class="legend" aria-label="Superficies"><span><i class="grass"></i>Hierba</span><span><i class="dirt"></i>Tierra</span><span><i class="rock"></i>Roca</span><span><i class="sand"></i>Orilla</span></div>
+        <p class="hint">Arrastra para girar <b>·</b> Acerca con la rueda o dos dedos</p>
+        <button id="credits" type="button">Materiales y créditos <span aria-hidden="true">↗</span></button>
+      </footer>
+      <dialog id="credits-dialog" aria-labelledby="credits-title">
+        <button id="close-credits" class="close" aria-label="Cerrar créditos">×</button>
+        <p class="eyebrow">ESTUDIO VISUAL / 01</p><h2 id="credits-title">Materiales del valle</h2>
+        <p>Una prueba de terreno continuo, cuatro superficies mezcladas, agua sencilla y vegetación agrupada. Los recursos se sirven desde este proyecto.</p>
+        <div class="material-grid"><figure><img src="./terrain-art/julio/grass-basecolor.jpg" alt="Textura pictórica de hierba" /><figcaption>Hierba</figcaption></figure><figure><img src="./terrain-art/julio/dirt-basecolor.jpg" alt="Textura de tierra" /><figcaption>Tierra</figcaption></figure><figure><img src="./terrain-art/julio/cliff-basecolor.jpg" alt="Textura de roca estratificada" /><figcaption>Roca</figcaption></figure><figure><img src="./terrain-art/julio/sand-basecolor.jpg" alt="Textura de arena" /><figcaption>Arena</figcaption></figure></div>
+        <h3>Texturas · JulioVII</h3><p><a href="https://juliovii.itch.io/ftpgrass-dirt" target="_blank" rel="noopener noreferrer">Stylized Grass & Dirt</a> y <a href="https://juliovii.itch.io/stylized-stone-wood" target="_blank" rel="noopener noreferrer">Stylized Stone & Wood — Julio Sillet (JulioVII)</a>. CC-BY, con atribución. Texturas reducidas de 4096 a 1024 px, recomprimidas y normales renormalizadas. Hierba y roca matizadas en el material.</p>
+        <h3>Vegetación y rocas · Quaternius</h3><p><a href="https://quaternius.itch.io/stylized-nature-megakit" target="_blank" rel="noopener noreferrer">Stylized Nature MegaKit — Standard</a>. CC0 1.0. Tres árboles, dos rocas, un arbusto y una mata de hierba.</p>
+        <p class="fine-print">El río y la orilla son propios. Sol, lluvia, nieve y verdor son controles de composición visual. Esta escena es una prueba; el agua, las estaciones y el rendimiento en un móvil físico no están validados como funciones del juego.</p>
+        <p id="scene-stats" class="fine-print"></p>
+      </dialog>
+    </main>
+  </body>
+</html>
