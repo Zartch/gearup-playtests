@@ -8,13 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-DvFrwoyE.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/settlementSandbox-BEzKQwLt.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/preload-helper-DyuKzX7y.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/rng-DaEszmZK.js">
-    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-BJa9i8no.js">
-    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/terrain-editor-yQOBryR8.js">
-    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-eNp9oWy4.css">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/settlement-sandbox-ChNxweEe.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/settlementSandbox-BDSd4ccB.css">
   </head>
   <body>
     <!-- Editor shell (LAB-ONLY): the approved «epic medieval skin», settlement-sandbox-ui README §1–§2, §5, §8. Presentation only. -->
@@ -182,7 +181,6 @@
 
       <footer class="statusbar">
         <span id="session-status" class="muted"></span>
-        <span id="terrain-editor-hint" class="muted" role="status"></span>
         <span id="status-scenario" hidden></span>
         <span id="status-hint" class="faint">Click: select · Alt+click or Tab: next under the cursor · Ctrl+↑: parent · right-click or Shift+F10: actions · Esc: deselect, close menus and dialogs · panels in » reopen from Window</span>
         <span class="sp"></span>
@@ -194,9 +192,9 @@
       <!-- Menus (README §2, Menus.dc.html): one open at a time; Escape, an outside click or running an item closes it. -->
       <div id="menu-session-list" class="menu" role="menu" aria-label="Session" hidden>
         <button id="menu-new-session" class="mi" type="button" role="menuitem" data-dialog="new-session"><svg class="ico" aria-hidden="true"><use href="#i-refresh"></use></svg><span>New session…</span><span class="sc"></span><span></span></button>
-        <button id="terrain-editor-open" class="mi" type="button" role="menuitem" tabindex="-1" aria-describedby="terrain-editor-hint"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg><span>Edit terrain…</span><span class="sc"></span><span></span></button>
+        <a id="terrain-editor-open" class="mi" role="menuitem" tabindex="-1" href="./terrain-paint.html" target="_blank" rel="noopener" aria-label="Edit terrain (opens in a new tab)"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg><span>Edit terrain</span><span class="sc"></span><span aria-hidden="true">↗</span></a>
         <div class="msep"></div>
-        <div class="mnote">Seed, origin, terrain and bounds; fixed terrain before the first event. The last result shows in the status bar.</div>
+        <div class="mnote">New session sets the seed, origin, terrain preset and bounds. Edit terrain opens Paint in a new tab.</div>
       </div>
       <div id="menu-scenario-list" class="menu" role="menu" aria-label="Scenario" hidden>
         <div id="scenario-slot"></div>
@@ -285,8 +283,6 @@
         </div>
       </dialog>
 
-      <!-- Shared terrain controls mount here; the map editor hosts the same view as a standalone page. -->
-      <dialog id="terrain-editor-dialog" class="dialog" aria-labelledby="terrain-editor-title" aria-describedby="terrain-editor-metadata"></dialog>
     </div>
   </body>
 </html>
