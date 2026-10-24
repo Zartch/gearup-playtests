@@ -1,0 +1,1 @@
+var e=(e,t=globalThis)=>{let n;try{n=t.localStorage}catch{return null}if(n===void 0)return null;let r=n;return Object.freeze({load:()=>{try{return r.getItem(e)}catch{return null}},save:t=>{try{r.setItem(e,t)}catch{}}})};export{e as t};
