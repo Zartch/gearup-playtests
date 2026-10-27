@@ -6,17 +6,17 @@
     <meta name="theme-color" content="#080810" />
     <link rel="icon" href="data:," />
     <title>Véspera y Albor · Gear Up</title>
-    <script type="module" crossorigin src="/gearup-playtests/assets/patronLab-Bac-myq1.js"></script>
+    <script type="module" crossorigin src="/gearup-playtests/assets/patronLab-DyS7VSMx.js"></script>
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/modulepreload-polyfill-P2Xu9kJm.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/three.module-DPGQKfeO.js">
     <link rel="modulepreload" crossorigin href="/gearup-playtests/assets/GLTFLoader-wxuDuVif.js">
-    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/patronLab-fWQkPJzi.css">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/assets/patronLab-C-QfZ8ah.css">
   </head>
   <body>
     <div class="lab">
       <header class="masthead"><a href="./" class="wordmark lab-home-link" aria-label="Volver al mapa de labs">GEAR UP <span>LABS</span></a><span class="top-label">EL UMBRAL · PATRONOS</span><button id="export" class="quiet">Exportar ficha ↗</button></header>
       <main>
-        <div class="intro"><p class="eyebrow">ANTES DE DAR EL PRIMER PASO</p><h1>Alguien te espera<br /><em>al otro lado.</em></h1><p>Da forma a tu personaje. Descubre quién quiere acompañarte.</p></div>
+        <div class="intro"><p class="eyebrow">ANTES DE DAR EL PRIMER PASO</p><h1>Alguien te espera<br /><em>al otro lado.</em></h1><p>Da forma a tu personaje. Descubre quién quiere acompañarte.</p><button id="conversation-open" class="outlined">Abrir intercambio local</button></div>
         <div class="workspace">
           <aside class="identity">
             <nav id="patron-tabs" aria-label="Elegir patrono"></nav>
@@ -39,6 +39,19 @@
             <button id="confirm" class="primary-action">Esta es mi forma <span>→</span></button><p class="footnote">Controles de prueba de apariencia. No cambian las capacidades del personaje.</p>
           </section>
         </div>
+        <section id="conversation-panel" class="conversation" aria-labelledby="conversation-heading" hidden>
+          <div class="conversation-heading"><div><p class="eyebrow">INTERCAMBIO AUTORADO · PRUEBA LOCAL</p><h2 id="conversation-heading">Un momento para conversar</h2></div><button id="conversation-close" class="quiet">Volver al catálogo</button></div>
+          <p class="muted">Véspera y Mara, una panadera de prueba, responden a las mismas opciones. La escena usa contenido local y no cambia el mundo.</p>
+          <div class="conversation-options">
+            <label>Interlocutor<select id="conversation-actor"><option value="vespera">Véspera</option><option value="mara">Mara · NPC de prueba</option></select></label>
+            <label>Situación<select id="conversation-availability"><option value="available">Disponible</option><option value="busy">Ocupado para conversar</option></select></label>
+            <label class="conversation-capacity"><input id="conversation-body-busy" type="checkbox" /> Cuerpo ocupado · capacidad del fixture</label>
+          </div>
+          <div class="conversation-dialogue"><p id="conversation-quote" aria-live="polite">Elige cómo empezar.</p><span id="conversation-speaker"></span><span id="conversation-intent"></span></div>
+          <div class="conversation-actions"><button id="conversation-greet" class="outlined">Saludar</button><button id="conversation-question" class="outlined">¿Podemos hablar?</button><button id="conversation-cancel" class="quiet">Cancelar gesto</button><button id="conversation-reset" class="quiet">Reiniciar intercambio</button></div>
+          <p id="conversation-state" class="footnote" role="status"></p>
+          <details><summary>Observar la interacción <small>INSPECTOR LOCAL</small></summary><pre id="conversation-trace"></pre></details>
+        </section>
         <div class="tools">
           <details open class="inspector"><summary>Sé <span>→</span> Creo / siento <span>→</span> Expreso <small>INSPECTOR DE REACCIONES</small></summary><div class="trace"><div><h3>01 · Sé</h3><p id="trace-know">Esperando una elección.</p></div><div><h3>02 · Creo / siento</h3><p id="trace-feel">Una misma elección puede provocar opiniones distintas.</p></div><div><h3>03 · Expreso</h3><p id="trace-express">Texto y gesto, o un silencio con motivo.</p></div></div><div class="inspector-actions"><button id="reset-session" class="quiet">Reiniciar conversación</button><button id="restore" class="quiet">Restaurar valores sin comentar</button><label><input id="cooldown" type="checkbox" checked /> Dar espacio entre comentarios</label></div></details>
           <details class="authoring"><summary>Avatares y contenido <small>EDICIÓN LOCAL</small></summary><p class="muted">Los archivos y cambios de esta sesión viven en este navegador. Exportar guarda la ficha; los modelos y logos locales se conservan por separado.</p><div class="authoring-grid">
