@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1611" />
+    <meta name="description" content="Atlas de los labs de Gear Up: juego, mundo y settlements, representación e inspección." />
+    <link rel="icon" href="data:," />
+    <title>Gear Up · Atlas de labs</title>
+    <script type="module" crossorigin src="/gearup-playtests/pr-preview/pr-244/assets/main-BsPNvK0d.js"></script>
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/pr-preview/pr-244/assets/rolldown-runtime-8BhlS34s.js">
+    <link rel="modulepreload" crossorigin href="/gearup-playtests/pr-preview/pr-244/assets/modulepreload-polyfill-BwpvBbVl.js">
+    <link rel="stylesheet" crossorigin href="/gearup-playtests/pr-preview/pr-244/assets/main-wz5Kvg6h.css">
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="i-sword" viewBox="0 0 24 24"><path d="M20 4l-9.5 9.5M20 4h-4.5M20 4v4.5M10.5 13.5l-3 3M6 13.5l4.5 4.5M4 20l2.2-2.2" /></symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z" /></symbol>
+      <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.8" /><path d="M4.5 21c.8-4.6 3.6-7 7.5-7s6.7 2.4 7.5 7" /></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6.5 10-6.5S22 12 22 12s-3.8 6.5-10 6.5S2 12 2 12z" /><circle cx="12" cy="12" r="2.8" /></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" /><path d="M3 20c.4-3.8 2.7-6 6-6s5.6 2.2 6 6M16 4.9a3.2 3.2 0 0 1 0 6.2M18 14.4c1.8.8 2.8 2.7 3 5.6" /></symbol>
+      <symbol id="i-castle" viewBox="0 0 24 24"><path d="M4 21V9h3V6h2v3h2V6h2v3h2V6h2v3h3v12zM10 21v-4.5h4V21" /></symbol>
+      <symbol id="i-brush" viewBox="0 0 24 24"><path d="M9 15L20 4M4 21c2.8 0 5-1.6 5-4a2.3 2.3 0 0 0-4.6 0c0 2-.9 3-.4 4z" /></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1" /><path d="M3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17" /></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6.5l6-3 6 3 6-3v14l-6 3-6-3-6 3zM9 3.5v14M15 6.5v14" /></symbol>
+      <symbol id="i-hammer" viewBox="0 0 24 24"><path d="M13 3.5l7.5 7.5-3 3L10 6.5zM11.5 8L3.5 16l4 4 8-8" /></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l9 5-9 5-9-5zM3 12.5l9 5 9-5M3 16.5l9 5 9-5" /></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2 20l7-12 4 6.5 3-4L22 20zM2 20h20" /></symbol>
+      <symbol id="i-helm" viewBox="0 0 24 24"><path d="M5 19v-7a7 7 0 0 1 14 0v7zM9.5 19v-5.5h5V19M12 5v4" /></symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3.5v17M6 20.5h12M4 7h16M7 7l-3 7h6zM17 7l-3 7h6z" /></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="M20 20l-4.2-4.2" /></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5.5" cy="18.5" r="2" /><circle cx="18.5" cy="5.5" r="2" /><path d="M7.5 18.5h5.5a3.2 3.2 0 0 0 0-6.4h-2a3.2 3.2 0 0 1 0-6.4h5.5" /></symbol>
+    </svg>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1 class="wordmark"><span class="crest" aria-hidden="true"></span><span class="brand">Gear Up</span><span class="brand-sub">Atlas de labs</span></h1>
+        <div class="search">
+          <label class="visually-hidden" for="lab-search">Buscar lab</label>
+          <svg class="icon search-icon" aria-hidden="true"><use href="#i-search" /></svg>
+          <input id="lab-search" type="search" placeholder="Buscar lab, escenario o herramienta…" autocomplete="off" spellcheck="false" />
+          <kbd class="search-key" aria-hidden="true">/</kbd>
+        </div>
+        <a class="cta" href="./gameplay.html"><svg class="icon" aria-hidden="true"><use href="#i-sword" /></svg>Entrar al Gameplay Lab</a>
+      </div>
+    </header>
+    <main class="atlas">
+      <section class="column column--game" id="gameplay" aria-labelledby="gameplay-heading">
+        <div class="column-head"><span class="numeral" aria-hidden="true">I</span><div><h2 id="gameplay-heading">Juego</h2><p>Personaje, movimiento y combate</p></div></div>
+        <a class="entry" href="./gameplay.html"><svg class="icon" aria-hidden="true"><use href="#i-sword" /></svg><span class="entry-text"><span class="entry-name">Gameplay Lab</span><span class="entry-desc">Movimiento, vuelo, equipo y combate</span></span><span class="entry-tag entry-tag--main">Principal</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./patron-lab.html"><svg class="icon" aria-hidden="true"><use href="#i-crown" /></svg><span class="entry-text"><span class="entry-name">Véspera y Albor</span><span class="entry-desc">Patronos, avatares y opiniones</span></span><span class="entry-tag">Patronos</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="http://127.0.0.1:4317/" data-dev-only hidden><svg class="icon" aria-hidden="true"><use href="#i-person" /></svg><span class="entry-text"><span class="entry-name">Creación de personaje</span><span class="entry-desc">Antes: <code>corepack pnpm lab:characters</code></span></span><span class="entry-tag entry-tag--local">▲ Local</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./gameplay.html?lab=covert-infiltration"><svg class="icon" aria-hidden="true"><use href="#i-eye" /></svg><span class="entry-text"><span class="entry-name">Infiltración</span><span class="entry-desc">Escenario encubierto y sus interacciones</span></span><span class="entry-tag">Escenario</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./gameplay.html?mode=playground"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg><span class="entry-text"><span class="entry-name">Playground</span><span class="entry-desc">Antes: <code>pnpm dev:playground</code></span></span><span class="entry-tag">LAN</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+      </section>
+      <section class="column column--world" id="world" aria-labelledby="world-heading">
+        <div class="column-head"><span class="numeral" aria-hidden="true">II</span><div><h2 id="world-heading">Mundo y settlements</h2><p>Del mapa al espacio local</p></div></div>
+        <a class="entry" href="./settlement-sandbox.html"><svg class="icon" aria-hidden="true"><use href="#i-castle" /></svg><span class="entry-text"><span class="entry-name">Settlements</span><span class="entry-desc">Distritos, conexiones y estructuras</span></span><span class="entry-tag">Sandbox</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./terrain-paint.html"><svg class="icon" aria-hidden="true"><use href="#i-brush" /></svg><span class="entry-text"><span class="entry-name">Editor de terreno</span><span class="entry-desc">Pinta un mapa 7×7 y funda una ciudad</span></span><span class="entry-tag">Authoring</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./settlement-area.html"><svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg><span class="entry-text"><span class="entry-name">Settlement Area</span><span class="entry-desc">Distribución espacial y áreas</span></span><span class="entry-tag">Vista</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./map-visualizer-v1.html"><svg class="icon" aria-hidden="true"><use href="#i-map" /></svg><span class="entry-text"><span class="entry-name">Map Visualizer</span><span class="entry-desc">Rutas, puentes, sites y capas</span></span><span class="entry-tag">Replay</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./site-work-lab.html" data-dev-only hidden><svg class="icon" aria-hidden="true"><use href="#i-hammer" /></svg><span class="entry-text"><span class="entry-name">Trabajo local</span><span class="entry-desc">Granjas, árboles y producción</span></span><span class="entry-tag entry-tag--local">▲ Local</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <div class="entry-group" id="spatial-tests"><svg class="icon" aria-hidden="true"><use href="#i-route" /></svg>Pruebas espaciales de movimiento</div>
+        <a class="entry entry--sub" href="./gameplay.html?lab=su-crossing">Cruce entre espacios</a>
+        <a class="entry entry--sub" href="./gameplay.html?lab=su-crossing-streaming">Carga y descarga progresiva</a>
+        <a class="entry entry--sub" href="./gameplay.html?lab=su-roadbed-bindings">Carreteras y soporte físico</a>
+        <a class="entry entry--sub" href="./gameplay.html?lab=su-crossing-missing-layout">Espacio sin layout · diagnóstico</a>
+      </section>
+      <section class="column column--tools" id="tools" aria-labelledby="tools-heading">
+        <div class="column-head"><span class="numeral" aria-hidden="true">III</span><div><h2 id="tools-heading">Representación e inspección</h2><p>Render, personajes y autoridad</p></div></div>
+        <a class="entry" href="./representation-lab.html"><svg class="icon" aria-hidden="true"><use href="#i-layers" /></svg><span class="entry-text"><span class="entry-name">Representation Lab</span><span class="entry-desc">Variantes, multitudes, LOD y coste</span></span><span class="entry-tag">Render</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./terrain-art.html"><svg class="icon" aria-hidden="true"><use href="#i-mountain" /></svg><span class="entry-text"><span class="entry-name">Valle del río</span><span class="entry-desc">Suelo, montaña, río y orilla</span></span><span class="entry-tag">Visual</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./character-probe.html"><svg class="icon" aria-hidden="true"><use href="#i-helm" /></svg><span class="entry-text"><span class="entry-name">Character Probe</span><span class="entry-desc">Personajes 3D, equipo y poblaciones</span></span><span class="entry-tag">3D</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./capacity-probe.html"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg><span class="entry-text"><span class="entry-name">Probe de capacidad</span><span class="entry-desc">Mundo, personajes y conjunto hasta el límite</span></span><span class="entry-tag">Capacidad</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+        <a class="entry" href="./authority-inspector.html"><svg class="icon" aria-hidden="true"><use href="#i-scale" /></svg><span class="entry-text"><span class="entry-name">Authority Inspector</span><span class="entry-desc">Dos sesiones, un mismo mundo</span></span><span class="entry-tag">Depuración</span><svg class="icon go" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+      </section>
+      <p class="no-results" role="status" hidden>Ningún lab coincide con la búsqueda.</p>
+    </main>
+    <footer class="foot">
+      <span data-dev-only hidden>▲ Local: sólo en este ordenador, oculto en producción.</span>
+      <span>El juego local ejecuta un mundo independiente en cada navegador.</span>
+    </footer>
+  </body>
+</html>
