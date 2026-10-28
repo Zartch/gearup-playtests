@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-8BhlS34s.js";var t;function n(){return(n=e((()=>{t=(e,t=globalThis)=>{let n;try{n=t.localStorage}catch{return null}if(n===void 0)return null;let r=n;return Object.freeze({load:()=>{try{return r.getItem(e)}catch{return null}},save:t=>{try{r.setItem(e,t)}catch{}}})}})))()}export{n,t};
