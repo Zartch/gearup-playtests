@@ -1,0 +1,158 @@
+{
+  "asset_id": "environment.building.medieval-village.house-kit",
+  "variant": "v001",
+  "created_at": "2026-11-04",
+  "source": {
+    "kind": "externally-sourced",
+    "provider": "Quaternius",
+    "tool": "Medieval Village MegaKit [Source]",
+    "archive": {
+      "name": "Medieval Village MegaKit[Source].zip",
+      "bytes": 708720797,
+      "sha256": "5e60888e2babe418a4618e7815539d9b1b2c3b24c1db2b22cd7a2a7f66140732"
+    }
+  },
+  "inputs": {
+    "rights_class": "cc0-public-domain",
+    "references": []
+  },
+  "transforms": [
+    "subset: 48 pieces of KIT_PIECES (packages/client/src/house-lab/assembly/kit-catalog.ts) from glTF/ of the archive",
+    "merge: one house-kit.gltf + house-kit.bin, one root node per piece named as the piece; accessors and bufferViews concatenated with 4-byte alignment; geometry and material parameters unchanged",
+    "bounds: piece-bounds.json holds the measured min/max of each piece's drawn POSITION data through its root node transform, rounded to 4 decimals",
+    "strip: the top cross beams of the jetty pieces are removed by making their triangles degenerate (wood triangles above y 2.93, or at y >= 2.8 with centre z in 0.6..1.15): Overhang_UnevenBrick_Long 27, Overhang_WoodWear_Long 123",
+    "dedupe: materials by name (8), images by uri (18), textures and samplers remapped; only images referenced by the subset's materials",
+    "resize: 18 PNG textures downscaled with sharp 0.35.5 lanczos3 to at most 1024px (png compressionLevel 9, no palette)",
+    "license: License_Source.txt copied with CRLF line endings normalized to LF (source 897 bytes, sha256 7310dfa8512d7ca12b6591329fda4adab7e8b9cdbe04c7d7061c2fe5c7dc38ee)"
+  ],
+  "rights": {
+    "policy_id": "cc0-1.0",
+    "commercial_use_checked": true,
+    "attribution_required": false,
+    "redistribution_constraints": [],
+    "terms_snapshot": "sha256:3729edb0adee3e16c2f027b025f74e53e2bf7d4a90d5c84e5a4c40092372897e"
+  },
+  "artifacts": [
+    {
+      "path": "ASSETS.md",
+      "bytes": 8655,
+      "sha256": "ab678477972f45fd1cc7fd24caa37b351f197b84b39a29bae909a0bc82b7901f"
+    },
+    {
+      "path": "License_Source.txt",
+      "bytes": 873,
+      "sha256": "3729edb0adee3e16c2f027b025f74e53e2bf7d4a90d5c84e5a4c40092372897e"
+    },
+    {
+      "path": "T_Brick_BaseColor.png",
+      "bytes": 1087841,
+      "sha256": "48af75c7d0977d76956a942ec2fbbd9e0814c79898e444672d59f1d077d5069c"
+    },
+    {
+      "path": "T_Brick_Normal.png",
+      "bytes": 1866843,
+      "sha256": "f85bd2f7801bf31e60d04f7ed15c0c1751e7c12f6b2bf1fea8b5011a6f7f8a10"
+    },
+    {
+      "path": "T_Brick_Roughness.png",
+      "bytes": 177900,
+      "sha256": "2e98722cd01b87db3674ed840df10153576e81a1d7c46b1d372347ff3b8d2720"
+    },
+    {
+      "path": "T_Plaster_BaseColor.png",
+      "bytes": 1112853,
+      "sha256": "65cbfd2b27dc0222f0a21457a088493fb244ca43038a6f91263351329d91a140"
+    },
+    {
+      "path": "T_Plaster_Normal.png",
+      "bytes": 1504397,
+      "sha256": "5922cca2e38695678814a1d7631ef3b9be67f6392a4ab56e9aabe13f9a1089e8"
+    },
+    {
+      "path": "T_Plaster_ORM.png",
+      "bytes": 785131,
+      "sha256": "7c544e9e8726516c129c069f9286246c3e5fdc1ef1f2a83e97602e2831113fd1"
+    },
+    {
+      "path": "T_RockTrim_BaseColor.png",
+      "bytes": 849811,
+      "sha256": "ccbbc05f29073681571a2de55c227edce0df0d6457ae89d8db5a7b2031f2c62d"
+    },
+    {
+      "path": "T_RockTrim_Normal.png",
+      "bytes": 1783504,
+      "sha256": "a806851c60b14ec5a852c05589735ff24ac943631e44ff27c73b2ddb4e06dd73"
+    },
+    {
+      "path": "T_RockTrim_ORM.png",
+      "bytes": 489285,
+      "sha256": "adb03449ab388bb3312f8946c6f21a7727b3e47480ae94024474ea273e35874f"
+    },
+    {
+      "path": "T_RoundTiles_BaseColor.png",
+      "bytes": 1423943,
+      "sha256": "1c54d726c08494dcc790a0e764ba6b82c9694d64785915cc2408730d104f5ef1"
+    },
+    {
+      "path": "T_RoundTiles_Normal.png",
+      "bytes": 1357422,
+      "sha256": "4775eb03c40b152158ab308e9d764e906cce429422ab90e81f7fba280631ee3e"
+    },
+    {
+      "path": "T_RoundTiles_Roughness.png",
+      "bytes": 380853,
+      "sha256": "a588d9555bab83d954ad28188574f51f6c125f6aef84d2d037714f348db0b1a8"
+    },
+    {
+      "path": "T_UnevenBrick_BaseColor.png",
+      "bytes": 1226193,
+      "sha256": "976bb82b3b522c4851a2d84c23d16402d89f37a2dd501671cca4168152a768bc"
+    },
+    {
+      "path": "T_UnevenBrick_Normal.png",
+      "bytes": 1520555,
+      "sha256": "04f3a21e18c44b1f5fc9d5f651386200f9d6354e0c750a9eb0977ddc65a9a609"
+    },
+    {
+      "path": "T_UnevenBrick_Roughness.png",
+      "bytes": 355249,
+      "sha256": "e78935c23849fede779cb69192aaf0f781fa520cb0ee4078c79b202e9d26525a"
+    },
+    {
+      "path": "T_WoodTrim_BaseColor.png",
+      "bytes": 892016,
+      "sha256": "396d17355d0c7b4ad7a101b8252eebaa7805320edb0dfabdd17b729ca5ee35d4"
+    },
+    {
+      "path": "T_WoodTrim_Normal.png",
+      "bytes": 1540449,
+      "sha256": "dc888dfeff338651c23e83114eea2f4080f93d5e09adfa15a4b5c3a3df2ff4a3"
+    },
+    {
+      "path": "T_WoodTrim_Roughness.png",
+      "bytes": 465590,
+      "sha256": "59a8cd8460a1f24e7067fbbfcbff8cd94474e3b19303330a71163e9a3e29f0a2"
+    },
+    {
+      "path": "house-kit.bin",
+      "bytes": 1193296,
+      "sha256": "3ce77898a5e3d290368810fd776bbeccce14a4c1d88666934423d234a47b4456"
+    },
+    {
+      "path": "house-kit.gltf",
+      "bytes": 82834,
+      "sha256": "5c58e6b68fd926d37c8021481d0b2ca6e7c9bae6eca757cf5d523be4c1829ad5"
+    },
+    {
+      "path": "piece-bounds.json",
+      "bytes": 7254,
+      "sha256": "a4c7595992b9bbd21a89835f9742a9140e8e71f1231ee2adaf64e936e09a3560"
+    }
+  ],
+  "validation": {
+    "legal_gate": "pass",
+    "technical_gate": "pass",
+    "performance_gate": "pending",
+    "creative_review": "pending"
+  }
+}
