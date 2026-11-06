@@ -1,0 +1,1 @@
+import{t as e}from"./house-lab-C9yCw7l6.js";e();

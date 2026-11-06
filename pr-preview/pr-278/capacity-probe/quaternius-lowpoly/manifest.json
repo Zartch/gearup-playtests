@@ -1,0 +1,121 @@
+{
+ "proposalDigest": "3194da00c3c8fe1c8ea343af3c13d11bb2d606d811eec62860945c2744895ba5",
+ "confirmedOn": "2026-11-02",
+ "pieces": {
+  "male/head": {
+   "source": "scripts/capacity-probe/lod/authored/male/head/authored-lowpoly.gltf",
+   "sha256": "52f93c2792398829c88d1abb4c4e0ba7edf62f9c15e0e11d081af1842fd0255b",
+   "published": "ddb7527c5bd41ceda8b59baf274d3ce6faaec77c58f13e7015411d428347ebfc"
+  },
+  "male/peasant.body": {
+   "source": "scripts/capacity-probe/lod/authored/male/peasant.body/authored-lowpoly.gltf",
+   "sha256": "c7cfdfdc770ac5e56e0b93a97a2df306409e93b641fcccf8d45d351680c76192",
+   "published": "04cbd4619c246648063040623ae7173ed3d2769d6433d7d380104fcfc9efc4f9"
+  },
+  "male/peasant.arms": {
+   "source": "scripts/capacity-probe/lod/authored/male/peasant.arms/authored-lowpoly.gltf",
+   "sha256": "54e579473a53f421b5298d7aaa8bc27e63ce9c450c55f161746751bfbc1f73d3",
+   "published": "4d371e89357641abacf893606d75d91d37fdae6266f37a1a5691117086fc889d"
+  },
+  "male/peasant.legs": {
+   "source": "scripts/capacity-probe/lod/authored/male/peasant.legs/authored-lowpoly.gltf",
+   "sha256": "c25c59b4ec2f3356fc9985fd8ed374c843aab8fc2919b859b83b347c3036717b",
+   "published": "4960ba7ef013f9a2a0d5d6189dc3fbfbe0305f8c95df64934e7e43c0ad2dbc37"
+  },
+  "male/peasant.feet": {
+   "source": "scripts/capacity-probe/lod/authored/male/peasant.feet/authored-lowpoly.gltf",
+   "sha256": "6f88ec077b77e0e9232500e85afc1c6c12c22da0d81894a91fc303c6786338db",
+   "published": "c98f537451363a6e66bc0d07753f587e9c9e084b953acb23ac2b7217d668b268"
+  },
+  "male/ranger.body": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.body/authored-lowpoly.gltf",
+   "sha256": "654e9d8690d0c4a9ba98479ef79eafe80dfef2c2afcdf7169cc5691c291bc341",
+   "published": "5160b8837c2e6bce7367e454285aafc27abdad8855bd4491e24151b1ca9f5394"
+  },
+  "male/ranger.arms": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.arms/authored-lowpoly.gltf",
+   "sha256": "ccbb89ca3e71bf0af7de66933e8b1d53390a38bf8af1c3c51d1e5e16a3f8f69f",
+   "published": "21e8bb35ffaac69cc1cb34f63ba171bff7ddad6c0c6f68ac0e9c2ae11bd92c6c"
+  },
+  "male/ranger.legs": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.legs/authored-lowpoly.gltf",
+   "sha256": "cadba91005752aaa1faad3c23408031a2a6e4f55551013fa51f6ea2918d79550",
+   "published": "7d04feb6d67f773e75955a7fdaa4b42772a11aff6e6288bca3430ac625f95ade"
+  },
+  "male/ranger.feet": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.feet/authored-lowpoly.gltf",
+   "sha256": "f1ee83f7f97e696521077789f3db5533fc75f92d5bb93177af3e4b8646a95b76",
+   "published": "90dfabd4844819888428c03b484a85c79fcc48f6a34cd7619edcb16756ba285b"
+  },
+  "male/ranger.hood": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.hood/authored-lowpoly.gltf",
+   "sha256": "9f38d89a8a75522dd987f820c7dd7af0d2f0382744ff811e826c70843b7fdcba",
+   "published": "065748791945edcb328d9aa9f8bdf5187baa108286295d1cad263b84160ea51c"
+  },
+  "male/ranger.pauldron": {
+   "source": "scripts/capacity-probe/lod/authored/male/ranger.pauldron/authored-lowpoly.gltf",
+   "sha256": "e2f2ad8f798fffa1181c455e725b9110f82158d0bbee995c6fbdc2b0ba91348d",
+   "published": "55262e7b89fd7859f529a2eea17c20c28874393d25f70d5c8cc962ab05452216"
+  },
+  "male/sword": {
+   "source": "scripts/capacity-probe/lod/authored/male/sword/authored-lowpoly.gltf",
+   "sha256": "cbb39b0fc4fb5b32447677538995443579e67993b90a561be3395f5f2ca42a39",
+   "published": "4a825f1625f4154b79de87b2c1be39946771d582d07b687737451bb36c524a74"
+  },
+  "female/head": {
+   "source": "scripts/capacity-probe/lod/authored/female/head/authored-lowpoly.gltf",
+   "sha256": "9d51f96d01fb0e00c2bed414a40106bd308c7b7d5ca744af1d617f55e307e6cc",
+   "published": "82b6483a002f2ba32c5e1c359a18b60abd2078107df367125e0d55cab5b142a6"
+  },
+  "female/peasant.body": {
+   "source": "scripts/capacity-probe/lod/authored/female/peasant.body/authored-lowpoly.gltf",
+   "sha256": "37def3d0058bb25f15977c4b67a0c382a7d97928e82a5531191947be3ebb6379",
+   "published": "6951c02932e536cca7818fc8558d711ee7e147e261a46c9d129699ef3a0f1975"
+  },
+  "female/peasant.arms": {
+   "source": "scripts/capacity-probe/lod/authored/female/peasant.arms/authored-lowpoly.gltf",
+   "sha256": "e00b82a2edbeeeae76b62556ab9df8cee24a50efe5d31296af4ddcb76b270297",
+   "published": "964044e650a26606af8cb57f3070c796cee3ce82338261ea827a134689744cc7"
+  },
+  "female/peasant.legs": {
+   "source": "scripts/capacity-probe/lod/authored/female/peasant.legs/authored-lowpoly.gltf",
+   "sha256": "4e485ad346fdbbae8294ea0b69849f2c54de847cc6924e8535ad7393e12066c7",
+   "published": "eda10a20e595e4541a018ae2c2a7d0f3a428ad587795922620a461e5f0cbabb1"
+  },
+  "female/peasant.feet": {
+   "source": "scripts/capacity-probe/lod/authored/female/peasant.feet/authored-lowpoly.gltf",
+   "sha256": "5c0e6e1af33160e9367878ac930f9d5f639d15349611c1511771ea7b31f7e942",
+   "published": "a079bedb0afaba028403a95bdb36be691b0f99a9aed3f857827943918edf65e6"
+  },
+  "female/ranger.body": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.body/authored-lowpoly.gltf",
+   "sha256": "d34167e22dd7eacd819f55d7282768c44d910b788a8793294c667cd107ab02e9",
+   "published": "f598efdcbe2f4a4197085d91db7db69eaec1fda6ad46caa005df2569dd207824"
+  },
+  "female/ranger.arms": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.arms/authored-lowpoly.gltf",
+   "sha256": "9496023d3503e686e7306abb5cd781dfc796607edfa9126d3f1bf691564b34cd",
+   "published": "465d1599189d79637d9f270d5822d874f566614495de685843303aee9f47efff"
+  },
+  "female/ranger.legs": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.legs/authored-lowpoly.gltf",
+   "sha256": "9a721a40d96ca4d2a6183b8ad761a9f74facce17aca0c368a16dd8f5bd3e67af",
+   "published": "9353d08b3415141a4536af1151d8b41a7a34ef99cc4da5ec66c95d74c089578a"
+  },
+  "female/ranger.feet": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.feet/authored-lowpoly.gltf",
+   "sha256": "682ce5ca2b14a377f6b95d8b111058948d82280d858b0ef81c9c33935da21634",
+   "published": "701028fb14d4426a50c7bd7b851aa949177744f2d72dd4f4846ed80ecd2244e3"
+  },
+  "female/ranger.hood": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.hood/authored-lowpoly.gltf",
+   "sha256": "54b90d4d9b0638d37997c6f8d2fe4144bb382e81b6e5d4a343461304b996d045",
+   "published": "7180d155c50fd73f8430220b3942ed04a572a5cbf973c7cb3bc7c450f716a458"
+  },
+  "female/ranger.pauldron": {
+   "source": "scripts/capacity-probe/lod/authored/female/ranger.pauldron/authored-lowpoly.gltf",
+   "sha256": "1d0ef05031ed3bc6ac81bf8a3c975fef7af675aeb8cdf6479488e62df5c5e4ab",
+   "published": "7922124a6effa7a730d6db2b7b8876ea4506f15e9a33d3d222ebfb2cea6d0b27"
+  }
+ }
+}
