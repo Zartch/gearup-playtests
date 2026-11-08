@@ -1,0 +1,1 @@
+import{t as e}from"./house-lab-CaN8-q67.js";e();
