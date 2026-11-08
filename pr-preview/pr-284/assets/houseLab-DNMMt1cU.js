@@ -1,0 +1,1 @@
+import{t as e}from"./house-lab-I-cfDIP8.js";e();
