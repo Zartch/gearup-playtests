@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-8BhlS34s.js";var t,n;function r(){return(r=e((()=>{t=class extends Error{constructor(e){super(`Request not sent: ${e}`),this.name=`RequestNotSent`}},n=class extends Error{constructor(){super(`Connection interrupted before the reply arrived; outcome unknown`),this.name=`RequestOutcomeUnknown`}}})))()}export{n,r,t};
