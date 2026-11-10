@@ -1,0 +1,55 @@
+{
+  "asset_id": "environment.port.rts-port-kit",
+  "variant": "v001",
+  "status": "candidate",
+  "created_at": "2026-11-10",
+  "source": {
+    "kind": "externally-sourced",
+    "provider": "Quaternius",
+    "tool": "Ultimate Fantasy RTS pack (glTF/ folder of the downloaded archive)",
+    "files": [
+      { "name": "glTF/Dock_FirstAge.gltf", "sha256": "47455401789970a2a4ad7a73ab0fda97b327ac408f0a28abb91bed82e5fcfae8" },
+      { "name": "glTF/Port_FirstAge_Level1.gltf", "sha256": "956c5146000b71be5ba862dabcdcdcc42c7f53123e2f4818fcd319a46dd73b11" },
+      { "name": "glTF/Port_FirstAge_Level2.gltf", "sha256": "61ab9bb378da844f11789c5dba99ce29b48ed62699eb91423d09f2734085a454" }
+    ],
+    "license_notice": "License_Source.txt (copied with CRLF normalized to LF; the pack's notice names it 'Ultimate Platformer Pack' by mistake, the licence is CC0 1.0)"
+  },
+  "inputs": {
+    "rights_class": "cc0-public-domain",
+    "references": [
+      "packages/client/public/house-lab/kit/T_WoodTrim_{BaseColor,Normal,Roughness}.png (Quaternius Medieval Village MegaKit, CC0; see house-lab/kit/abom.json)"
+    ]
+  },
+  "transforms": [
+    "planks: scripts/port-kit/derive_planks.py crops rows 0..312 (Light) and 328..640 (Dark) of each T_WoodTrim map at full width, pixels unchanged",
+    "scale: uniform x7.5 on every RTS model (pack-wide RPG scale; RTS house door 0.285 u -> 2.14 m)",
+    "weld: remove_doubles 0.002 m (the RTS meshes ship one island per face)",
+    "pier: Dock_FirstAge split into Pier_Deck_2m (middle bay y -1..1), Pier_Posts (pile pair at y -1.565) and Pier_End (last 0.6 m); cut ends capped; narrowed from 3.78 m to 2.08 m wide: pieces long across the deck scale in x, piles/stringers/caps keep their section and move inward",
+    "boat: hull island of Port_FirstAge_Level2 aligned to its principal axis, scaled x0.7 (6.5 x 3 m -> 4.5 x 2.1 m)",
+    "hut/barrel/sacks: islands of Port_FirstAge_Level1 selected by bounds, recentred, floor at 0",
+    "materials: Wood -> GU_WoodPlankDark, Wood_Light -> GU_WoodPlankLight (plank textures); Fabric and Metal_Light keep their RTS colour, roughness 0.85 (metal metallic 0.6); one material per name",
+    "uv: per-face planar projection, 0.5 repeats/m along the grain and 1/0.61 across; grain follows the longest axis of each connected piece",
+    "export: Blender 5.2.2 glTF exporter (Khronos glTF Blender I/O), GLTF_SEPARATE, no tangents"
+  ],
+  "tooling": {
+    "blender": "5.2.2",
+    "scripts": ["scripts/port-kit/derive_planks.py", "scripts/port-kit/rts_adapt.py", "scripts/port-kit/build_port_kit.py"]
+  },
+  "artifacts": [
+    { "file": "port-kit.gltf", "sha256": "29deb5b441234171543a6267232f428b42f154e0128d4f8da05b625b7d16e654" },
+    { "file": "port-kit.bin", "sha256": "133ccf8171a3d11f38dc724ccbb7fd1010a4189f719eda30eec7130b7c2f86be" },
+    { "file": "T_WoodPlankDark_BaseColor.png", "sha256": "237f9c2d46df708822f55b4964322863612c0e66f4606ca0df602dbfaeff856f" },
+    { "file": "T_WoodPlankDark_Normal.png", "sha256": "3a4331431733afc83f222cf52cc378073fe451c3f15c1bf545918a44fad0700e" },
+    { "file": "T_WoodPlankDark_Roughness.png", "sha256": "ec2b3ee20712831faf49c5ed88108ae0a2e6804a418851b67558e3717def6cfb" },
+    { "file": "T_WoodPlankLight_BaseColor.png", "sha256": "b8536bbeffa4c02aa135734cbf7df912c1a14ec8f68ecca9501233f487993a79" },
+    { "file": "T_WoodPlankLight_Normal.png", "sha256": "21d31a23babfe7bc3d8099f78881348d8d5867958b512ceea220472c22962e8b" },
+    { "file": "T_WoodPlankLight_Roughness.png", "sha256": "db7b6bd14311e86cd88b4f233dcb361cf36a66948ee9670b96fa7abd1d82147e" },
+    { "file": "License_Source.txt", "sha256": "f22fa91c48be8a5702579b317d69b4375a86ef10e16686d8a323cc7425fadb9d" }
+  ],
+  "gates": {
+    "legal": "pass (CC0 1.0, no attribution required)",
+    "technical": "pending review in the Port study scene",
+    "performance": "not measured on a phone",
+    "creative": "pending user review; not promoted"
+  }
+}
